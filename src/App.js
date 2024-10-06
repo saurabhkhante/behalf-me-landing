@@ -11,8 +11,8 @@ import { Calendar, Home, Smartphone, BookOpen, PhoneCall, Users } from "lucide-r
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-[#FFFDF7]">
-      <header className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <div className="flex flex-col min-h-screen bg-[#F5F5F4]">
+      <header className="container mx-auto px-4 py-4 flex items-center justify-between bg-gradient-to-br from-[#FFF4E6] to-[#FFECD1]">
         <a href="/" className="flex items-center space-x-2">
           <span className="text-2xl font-bold">behalf.me</span>
         </a>
@@ -29,7 +29,7 @@ function App() {
         </nav>
       </header>
       <main className="flex-grow">
-        <section className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center">
+        <section className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center bg-[#F5F5F4]">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
               Tech help at
@@ -69,22 +69,22 @@ function App() {
           </div>
         </section>
 
-        <section id="features" className="bg-white py-20">
+        <section id="features" className="bg-[#FFFBF5] py-20">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose behalf.me?</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="flex flex-col items-center text-center">
-                <Home className="h-12 w-12 text-yellow-500 mb-4" />
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <Home className="h-12 w-12 text-yellow-500 mb-4 mx-auto" />
                 <h3 className="text-xl font-semibold mb-2">Personalized In-Home Support</h3>
                 <p className="text-gray-600">Experience one-on-one tech guidance in your familiar environment with behalf.me experts</p>
               </div>
-              <div className="flex flex-col items-center text-center">
-                <Smartphone className="h-12 w-12 text-yellow-500 mb-4" />
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <Smartphone className="h-12 w-12 text-yellow-500 mb-4 mx-auto" />
                 <h3 className="text-xl font-semibold mb-2">Tailored Solutions</h3>
                 <p className="text-gray-600">Get solutions customized to your specific devices and needs, on your behalf</p>
               </div>
-              <div className="flex flex-col items-center text-center">
-                <BookOpen className="h-12 w-12 text-yellow-500 mb-4" />
+              <div className="bg-white p-6 rounded-lg shadow-md text-center">
+                <BookOpen className="h-12 w-12 text-yellow-500 mb-4 mx-auto" />
                 <h3 className="text-xl font-semibold mb-2">Patience and Understanding</h3>
                 <p className="text-gray-600">Our behalf.me experts take the time to explain things at your pace</p>
               </div>
@@ -92,7 +92,7 @@ function App() {
           </div>
         </section>
 
-        <section id="services" className="bg-gray-100 py-20">
+        <section id="services" className="bg-[#F5F5F4] py-20">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Our behalf.me Services</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
@@ -125,7 +125,7 @@ function App() {
           </div>
         </section>
 
-        <section id="cta" className="bg-yellow-400 py-20">
+        <section id="cta" className="bg-[#FBBF24] py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started with behalf.me?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
