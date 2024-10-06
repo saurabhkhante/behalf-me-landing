@@ -10,6 +10,12 @@ import { Calendar, Home, Smartphone, BookOpen, PhoneCall, Users } from "lucide-r
 
 
 function App() {
+  
+  const handleBookVisit = () => {
+    // Replace 'YOUR_TALLY_FORM_URL' with your actual Tally form URL
+    window.open('https://tally.so/r/nPX0rP', '_blank');
+  };
+  
   return (
     <div className="flex flex-col min-h-screen bg-[#F5F5F4]">
       <header className="container mx-auto px-4 py-4 flex items-center justify-between bg-gradient-to-br from-[#FFF4E6] to-[#FFECD1]">
@@ -39,7 +45,7 @@ function App() {
             <p className="text-xl mb-8 text-gray-600 max-w-md">
               Empowering seniors with personalized, in-home tech support. We solve your tech challenges so you can stay connected.
             </p>
-            <Button className="bg-black text-white hover:bg-gray-800 flex items-center">
+            <Button className="bg-black text-white hover:bg-gray-800 flex items-center" onClick={handleBookVisit}>
               Book a Visit
               <svg
                 xmlns="http://www.w3.org/2000/svg"
