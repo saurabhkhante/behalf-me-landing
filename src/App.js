@@ -26,27 +26,21 @@ function App() {
           <a className="text-sm font-medium hover:text-yellow-500" href="#pricing">
             Pricing
           </a>
-          <a className="text-sm font-medium hover:text-yellow-500" href="#style-guide">
-            Style Guide
-          </a>
-          <a className="text-sm font-medium hover:text-yellow-500" href="#login">
-            Login
-          </a>
         </nav>
       </header>
       <main className="flex-grow">
         <section className="container mx-auto px-4 py-20 md:py-32 flex flex-col md:flex-row items-center bg-[#F5F5F4]">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
-              Tech help at
+              Empower your parents
               <br />
-              your doorstep.
+              digitally
             </h1>
             <p className="text-xl mb-8 text-gray-600 max-w-md">
               Empowering seniors with personalized, in-home tech support. We solve your tech challenges so you can stay connected.
             </p>
             <Button className="bg-black text-white hover:bg-gray-800 flex items-center" onClick={handleBookVisit}>
-              Book a Visit
+              Get Started
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
