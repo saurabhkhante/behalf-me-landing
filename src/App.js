@@ -2,6 +2,39 @@ import React from 'react';
 import { Button } from "./components/ui/button";
 import { Check, Shield, Home, BookOpen } from "lucide-react";
 
+// Reusable CTA Component
+const SectionCTA = ({ message = "Book a Home Visit" }) => {
+  const handleBookVisit = () => {
+    window.open('https://tally.so/r/nPX0rP', '_blank');
+  };
+
+  return (
+    <div className="mt-12 text-center">
+      <Button 
+        onClick={handleBookVisit}
+        className="bg-black text-white hover:bg-gray-800 transition-colors inline-flex items-center gap-2 px-6 py-3"
+      >
+        <span>{message}</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="flex-shrink-0"
+        >
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </Button>
+    </div>
+  );
+};
+
 function App() {
   const handleBookVisit = () => {
     window.open('https://tally.so/r/nPX0rP', '_blank');
@@ -30,7 +63,7 @@ function App() {
                 Your Parents' Personal Tech Expert
               </h1>
               <p className="text-xl text-gray-600 mb-8">
-                Because you can't always be there to help!!!
+                Because you can't always be there to help
               </p>
               <Button 
                 className="bg-black text-white hover:bg-gray-800 flex items-center" 
@@ -93,7 +126,7 @@ function App() {
               ].map((card, index) => (
                 <div 
                   key={index}
-                  className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
                 >
                   <div className="bg-yellow-50 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                     <div className="text-yellow-500">
@@ -105,57 +138,56 @@ function App() {
                 </div>
               ))}
             </div>
+            <SectionCTA message="Get Help With Your Tech Issues" />
           </div>
         </section>
 
         {/* Daily Digital Challenges Section */}
-        {/* Daily Digital Challenges Section */}
-<section className="py-20">
-  <div className="container mx-auto px-6">
-    <h2 className="text-3xl font-bold text-center mb-12">
-      We Help With Daily Digital Challenges
-    </h2>
-    
-    {/* Two Cards Container */}
-    <div className="flex flex-col md:flex-row gap-8">
-      {/* Essential Services Card */}
-      <div className="bg-white rounded-lg p-8 shadow-md flex-1">
-        <h3 className="text-xl font-semibold mb-6">Essential Services</h3>
-        <div className="space-y-4">
-          {[
-            "Setting up UPI payments for daily needs",
-            "Troubleshooting video calls with family",
-            "Managing online medicine orders",
-            "Booking cab services safely"
-          ].map((service, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-yellow-500" />
-              <span className="text-gray-600">{service}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+        <section className="bg-[#F5F5F4] py-20">
+          <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-bold text-center mb-16">
+              We Help With Daily Digital Challenges
+            </h2>
+            <div className="flex flex-col md:flex-row gap-8">
+              {/* Essential Services Card */}
+              <div className="bg-white rounded-lg p-8 shadow-md flex-1">
+                <h3 className="text-xl font-semibold mb-6">Essential Services</h3>
+                <div className="space-y-4">
+                  {[
+                    "Setting up UPI payments for daily needs",
+                    "Troubleshooting video calls with family",
+                    "Managing online medicine orders",
+                    "Booking cab services safely"
+                  ].map((service, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-yellow-500" />
+                      <span className="text-gray-600">{service}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-      {/* Digital Safety Card */}
-      <div className="bg-white rounded-lg p-8 shadow-md flex-1">
-        <h3 className="text-xl font-semibold mb-6">Digital Safety</h3>
-        <div className="space-y-4">
-          {[
-            "Identifying and avoiding online scams",
-            "Secure password management",
-            "Safe online banking practices",
-            "Understanding which apps to trust"
-          ].map((service, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <Check className="w-4 h-4 text-yellow-500" />
-              <span className="text-gray-600">{service}</span>
+              {/* Digital Safety Card */}
+              <div className="bg-white rounded-lg p-8 shadow-md flex-1">
+                <h3 className="text-xl font-semibold mb-6">Digital Safety</h3>
+                <div className="space-y-4">
+                  {[
+                    "Identifying and avoiding online scams",
+                    "Secure password management",
+                    "Safe online banking practices",
+                    "Understanding which apps to trust"
+                  ].map((service, index) => (
+                    <div key={index} className="flex items-center gap-2">
+                      <Check className="w-4 h-4 text-yellow-500" />
+                      <span className="text-gray-600">{service}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+            <SectionCTA message="Schedule Your Tech Support Visit" />
+          </div>
+        </section>
 
         {/* Peace of Mind Section */}
         <section className="bg-[#FFFBF5] py-20">
@@ -183,9 +215,9 @@ function App() {
               ].map((card, index) => (
                 <div 
                   key={index}
-                  className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
                 >
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
+                  <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white font-bold text-xl">
                     {card.number}
                   </div>
                   <h3 className="text-xl font-semibold mb-4">{card.title}</h3>
@@ -193,11 +225,11 @@ function App() {
                 </div>
               ))}
             </div>
+            <SectionCTA message="Book Your First Visit Today" />
           </div>
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="bg-black text-white py-8">
         <div className="container mx-auto px-6 flex justify-between items-center">
           <p>&copy; 2024 behalf.me. All rights reserved.</p>
