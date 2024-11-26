@@ -91,7 +91,7 @@ function App() {
               <div className="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent z-10" />
                 <img
-                  src="images/behalf_hero.png"
+                  src="images/behalf_hero_compressed.png"
                   alt="Senior using technology"
                   className="w-full h-full object-cover"
                 />
